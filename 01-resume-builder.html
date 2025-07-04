@@ -12,205 +12,225 @@
 <body>
 
   <div class="enter-resume-data">
-    <form action="live-preview" id="form">
+    <form id="form">
+      Upload your photo: <input type="file" id="img-uploader" accept="image/*"><br><br>
       Enter your name: <input type="text" id="user-name"><br><br>
       Enter the designation: <input type="text" id="designation"><br><br>
       Enter the phone number:<input type="text" id="phn"><br><br>
       Enter your Email: <input type="email" id="email"><br><br>
       Enter your city: <input type="address" id="address"><br><br>
+      Enter the link of your LinkedIn profile: <input type="url" id="linkURL"><br><br>
+      Enter your years in college: <input type="text" name="" id="clg-yrs"><br><br>
+      Enter the college name: <input type="text" name="college-name" id="clg-name"><br><br>
+      Enter the university name: <input type="text" name="university-name" id="uni-name"><br><br>
+      Enter the course: <input type="text" name="degree-name" id="dgr-name"><br><br>
+      Enter the years in school: <input type="text" id="scl-yrs"><br><br>
+      Enter the School Name: <input type="text" name="school-name" id="scl-nm"><br><br>
+      Enter the Board: <input type="text" name="board-name" id="board-nm"><br><br>
+      Enter 12th Percent: <input type="text" id="12th"><br><br>
+      Enter 10th Percent: <input type="text" id="10th"><br><br>
+      Enter your skills: <input type="text" id="skills"><br><br>
+      Enter your languages <input type="text" id="lang"><br><br>
+
     </form>
+
+    <button onclick="downloadPDF()">Download Resume PDF</button>
   </div>
 
-  <div class="container live-preview">
-    <div class="col-1">
-      <div class="row1-1">
-        <img src="pradeep.jpg" class="display-pic" alt="Pradeep-display_pic" width="175px" height="175px">
-      </div>
-
-      <div class="row1-2">
-        <h2 class="contact-caption">CONTACT</h2>
-        <hr class="contact-line">
-        <div class="phnDetails">
-          <img src="phone.png" alt="phone" class="phn-icon" width="20px" height="20px">
-          <p class="phnDigits">+91-9828835749</p>
+  <div id="resume-content">
+    <div class="container live-preview">
+      <div class="col-1">
+        <div class="row1-1">
+          <img id="img-preview" class="display-pic" alt="Pradeep-display_pic" width="175px" height="175px">
         </div>
-        <div class="emailDetails">
-          <img src="email.png" alt="email" class="email-icon" width="20px" height="20px">
-          <p class="emailData">pradeepkhatri44@live.com</p>
+
+        <div class="row1-2">
+          <h2 class="contact-caption">CONTACT</h2>
+          <hr class="contact-line">
+          <div class="phnDetails">
+            <img src="phone.png" alt="phone" class="phn-icon" width="20px" height="20px">
+            <p class="phnDigits"></p>
+          </div>
+          <div class="emailDetails">
+            <img src="email.png" alt="email" class="email-icon" width="20px" height="20px">
+            <p class="emailData"></p>
+          </div>
+          <div class="addressDetails">
+            <img src="map.png" alt="map" class="map-icon" width="20px" height="20px">
+            <p class="addressData"></p>
+          </div>
+          <div class="linkedin">
+            <img src="web.png" alt="www" class="web-icon" width="20px" height="20px">
+            <p class="linkedinLink"><a href="https://www.linkedin.com/in/ipradeepkhatri/" class="linkedinURL">LinkedIn
+                Profile Link</a></p>
+          </div>
         </div>
-        <div class="addressDetails">
-          <img src="map.png" alt="map" class="map-icon" width="20px" height="20px">
-          <p class="addressData">Pushkar, Ajmer [RAJ]</p>
-        </div>
-        <div class="linkedin">
-          <img src="web.png" alt="www" class="web-icon" width="20px" height="20px">
-          <p class="linkedinLink"><a href="https://www.linkedin.com/in/ipradeepkhatri/">LinkedIn Profile Link</a></p>
-        </div>
-      </div>
 
-      <div class="row1-3">
-        <h2 class="education-caption">EDUCATION</h2>
-        <hr class="edu-line">
-        <div class="edu-details">
-          <p>2015-2019<br>
-            ST XAVIER'S COLLEGE, JAIPUR<br>
-            (RAJASTHAN UNIVERSITY)</p>
-          <ul>
-            <li>Bachelors in Arts (English Honors)</li>
-          </ul>
-          <p class="school">2011-2015<br>
-            MAHESHWARI PUBLIC SCHOOL, AJMER (CBSE, NEW DELHI)</p>
-          <ul>
-            <li>Sr. Secondary Education: 81.4%</li>
-            <li>Secondary Education: 8.6/10 CGPA</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row1-4">
-        <h2 class="skills-caption">SKILLS</h2>
-        <hr class="skills-line">
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Bootstrap, TailwindCSS</li>
-          <li>NodeJS, ExpressJS, ReactJS</li>
-          <li>NPM, JSON</li>
-          <li>MySQL, PostgreSQL</li>
-          <li>MS Office</li>
-        </ul>
-      </div>
-
-      <div class="row1-5">
-        <h2 class="languages-caption">LANGUAGES</h2>
-        <hr class="languages-line">
-        <ul>
-          <li>English</li>
-          <li>Hindi</li>
-          <li>Sindhi</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-2">
-      <div class="row2-1">
-        <h1 class="name"></h1>
-        <h2 class="post"></h2>
-        <hr class="below-post">
-      </div>
-
-      <div class="row2-2">
-        <h2 class="profile-caption">PROFILE</h2>
-        <hr class="profile-line">
-        <p class="profile-text">While selling my goods on the E-commerce site ‘Flipkart’, it came to me why don’t I
-          study for Full-Stack Web Development and get some experience in the IT. Hence, I studied a ‘Front-End’ course
-          in Sugyanam Institute in Ajmer and a ‘Full-Stack’ course from online study portal ‘Udemy’. As a Full-Stack Web
-          Developer, I have designed a few responsive projects with my knowledge in HTML, CSS, and JavaScript.</p>
-      </div>
-
-      <div class="row2-3">
-        <h2 class="project-caption">PROJECT EXPERIENCE</h2>
-        <hr class="project-line">
-        <ol>
-          <li>
-            <b>FURNISHING WEBSITE WITH CART</b>
-            <b>LIVE:</b> https://comfyhouse-furnishing-2.onrender.com
-            <b>GIT:</b> https://github.com/Prdp-ktri/ComfyHouse-Furnishing
-            <b>Technologies Used:</b> HTML5, CSS3, JavaScript, Bootstrap, and JSON
-            <b>Key Features:</b>
+        <div class="row1-3">
+          <h2 class="education-caption">EDUCATION</h2>
+          <hr class="edu-line">
+          <div class="edu-details">
+            Years: <p class="clg-yrs"></p>
+            College Name: <p class="college"></p>
+            University Name: <p class="university"></p>
             <ul>
-              <li>
-                <b>Interactive Shopping Cart Functionality:</b> Allows users to add, remove, and update product
-                quantities in a real-time shopping cart with persistent state.
+              Course: <li class="degree"></li>
+            </ul>
+            School Years: <p class="school-yrs"></p>
+            School Name: <p class="school-name"></p>
+            Board: <p class="board"></p>
+            <ul>
+              <li>Sr. Secondary Education: <p class="twelfth-percent"></p>
               </li>
-              <li>
-                <b>Responsive and Mobile-Friendly Design:</b> Fully responsive layout optimized for both desktop and
-                mobile devices using modern HTML5, CSS3, and JavaScript.
-              </li>
-              <li>
-                <b>Local Storage Integration:</b> Maintains cart data and user session using local storage, ensuring
-                data persistence without backend support.
+              <li>Secondary Education: <p class="tenth-percent"></p>
               </li>
             </ul>
-          </li>
+          </div>
+        </div>
 
-          <li>
-            <b>ADANI REAL ESTATE</b>
-            <b>LIVE:</b> https://adani-real-estate.onrender.com
-            <b>GIT:</b> https://github.com/Prdp-ktri/LandingPageWithTailwind
-            <b>Technologies Used:</b> HTML5, CSS3, JavaScript, TailwindCSS, ReactJS, Vite, NodeJS, and ExpressJS
-            <b>Key Features:</b>
-            <ul>
-              <li>
-                <b>Modern UI with Tailwind CSS:</b> Built entirely with Tailwind CSS, ensuring clean, responsive, and
-                utility-first styling. Easily customizable design for quick branding and visual tweaks.
-              </li>
-              <li>
-                <b>React + Vite Integration:</b> Utilizes Vite for blazing-fast development and builds. Structured using
-                React components for reusability and scalability.
-              </li>
-              <li>
-                <b>Responsive Design with smooth scroll & navigation:</b> Fully responsive layout optimized for mobile,
-                tablet, and desktop devices.. Ensures seamless user experience across screen sizes. Interactive navbar
-                with smooth scrolling to sections. Enhances user experience with fluid navigation.
-              </li>
-              <li>
-                <b>Reusable Components with SEO friendly structure:</b> Modular code structure with reusable components
-                like Hero, Features, and Footer. Easy to extend or integrate into other projects. Clean HTML semantics
-                and proper metadata setup for better search engine visibility
-              </li>
-              <li>
-                <b>Fast Loading, Customizable, and Open Source:</b> Optimized assets and minimal dependencies make it
-                quick to load. Free to use and modify — perfect as a boilerplate for personal or client projects.
-              </li>
-            </ul>
-          </li>
+        <div class="row1-4">
+          <h2 class="skills-caption">SKILLS</h2>
+          <hr class="skills-line">
+          <p class="skills-1"></p>
+        </div>
 
-          <li>
-            <b>MOVIE REVIEW APP</b>
-            <b>LIVE:</b> https://movie-review-app-xsyj.onrender.com
-            <b>GIT:</b> https://github.com/Prdp-ktri/Movie-Review-App
-            <b>Technologies Used:</b> HTML5, CSS3, JavaScript, ReactJS, Vite, NodeJS, ExpressJS, MongoDB, and Mongoose
-            <b>Key Features:</b>
-            <ul>
-              <li>
-                <b>Add Movie Reviews:</b> Users can submit a review for a movie, including: Movie Title, Review Text,
-                Rating 1 to 5, Reviewer’s Name, and the movie cover or poster.
-              </li>
-              <li>
-                <b>Image Upload Support:</b> Users can upload an image with each review. Images are stored on the server
-                and displayed alongside the review. Uses Multer middleware for handling image uploads on the backend.
-              </li>
-              <li>
-                <b>View All The Reviews:</b> All submitted reviews are displayed on the main page. Each review shows:
-                Movie Title, Review Text, Rating 1 to 5, Reviewer’s Name, and the movie cover or poster.
-              </li>
-              <li>
-                <b>Edit Reviews:</b> Users can update existing reviews through an edit form. Fields such as title,
-                review text, rating, and image can be changed.
-              </li>
-              <li>
-                <b>Delete Reviews:</b> Reviews can be removed with a delete button.
-              </li>
-              <li>
-                <b>MongoDB Integration:</b> Reviews are stored persistently using MongoDB via Mongoose. Each review is
-                stored as a document in the database.
-              </li>
-              <li>
-                <b>Express Backend API:</b> RESTful API built using Node.js and Express. API supports CRUD operations
-                (Create, Read, Update, Delete).
-              </li>
-              <li>
-                <b>Modern Frontend:</b> Clean and responsive UI built with HTML, CSS, and JavaScript. Interactive form
-                handling and dynamic review updates.
-              </li>
+        <div class="row1-5">
+          <h2 class="languages-caption">LANGUAGES</h2>
+          <hr class="languages-line">
+          <p class="languages"></p>
+        </div>
+      </div>
 
-            </ul>
-          </li>
-        </ol>
+      <div class="col-2">
+        <div class="row2-1">
+          <h1 class="name"></h1>
+          <h2 class="post"></h2>
+          <hr class="below-post">
+        </div>
+
+        <div class="row2-2">
+          <h2 class="profile-caption">PROFILE</h2>
+          <hr class="profile-line">
+          <p class="profile-text">While selling my goods on the E-commerce site ‘Flipkart’, it came to me
+            why don’t I study for Full-Stack Web Development and get some experience in the IT. Hence, I
+            studied a ‘Front-End’ course in Sugyanam Institute in Ajmer and a ‘Full-Stack’ course from
+            online study portal ‘Udemy’. As a Full-Stack Web-Developer, I have designed a few responsive
+            projects with my knowledge in HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="row2-3">
+          <h2 class="project-caption">PROJECT EXPERIENCE</h2>
+          <hr class="project-line">
+          <ol>
+            <li>
+              <b>FURNISHING WEBSITE WITH CART</b>
+              <b>LIVE:</b> https://comfyhouse-furnishing-2.onrender.com
+              <b>GIT:</b> https://github.com/Prdp-ktri/ComfyHouse-Furnishing
+              <b>Technologies Used:</b> HTML5, CSS3, JavaScript, Bootstrap, and JSON
+              <b>Key Features:</b>
+              <ul>
+                <li>
+                  <b>Interactive Shopping Cart Functionality:</b> Allows users to add, remove, and update
+                  product quantities in a real-time shopping cart with persistent state.
+                </li>
+                <li>
+                  <b>Responsive and Mobile-Friendly Design:</b> Fully responsive layout optimized for both
+                  desktop and mobile devices using modern HTML5, CSS3, and JavaScript.
+                </li>
+                <li>
+                  <b>Local Storage Integration:</b> Maintains cart data and user session using local storage,
+                  ensuring data persistence without backend support.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <b>ADANI REAL ESTATE</b>
+              <b>LIVE:</b> https://adani-real-estate.onrender.com
+              <b>GIT:</b> https://github.com/Prdp-ktri/LandingPageWithTailwind
+              <b>Technologies Used:</b> HTML5, CSS3, JavaScript, TailwindCSS, ReactJS, Vite, NodeJS, and
+              ExpressJS.
+              <b>Key Features:</b>
+              <ul>
+                <li>
+                  <b>Modern UI with Tailwind CSS:</b> Built entirely with Tailwind CSS, ensuring clean,
+                  responsive, and utility-first styling. Easily customizable design for quick branding and
+                  visual tweaks.
+                </li>
+                <li>
+                  <b>React + Vite Integration:</b> Utilizes Vite for blazing-fast development and builds.
+                  Structured using React components for reusability and scalability.
+                </li>
+                <li>
+                  <b>Responsive Design with smooth scroll & navigation:</b> Fully responsive layout optimized
+                  for mobile, tablet, and desktop devices.. Ensures seamless user experience across screen sizes.
+                  Interactive navbar with smooth scrolling to sections. Enhances user experience with fluid
+                  navigation.
+                </li>
+                <li>
+                  <b>Reusable Components with SEO friendly structure:</b> Modular code structure with reusable
+                  components
+                  like Hero, Features, and Footer. Easy to extend or integrate into other projects. Clean HTML
+                  semantics and proper metadata setup for better search engine visibility
+                </li>
+                <li>
+                  <b>Fast Loading, Customizable, and Open Source:</b> Optimized assets and minimal dependencies
+                  make it quick to load. Free to use and modify — perfect as a boilerplate for personal or client
+                  projects.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <b>MOVIE REVIEW APP</b>
+              <b>LIVE:</b> https://movie-review-app-xsyj.onrender.com
+              <b>GIT:</b> https://github.com/Prdp-ktri/Movie-Review-App
+              <b>Technologies Used:</b> HTML5, CSS3, JavaScript, ReactJS, Vite, NodeJS, ExpressJS, MongoDB, and Mongoose
+              <b>Key Features:</b>
+              <ul>
+                <li>
+                  <b>Add Movie Reviews:</b> Users can submit a review for a movie, including: Movie Title, Review Text,
+                  Rating 1 to 5, Reviewer’s Name, and the movie cover or poster.
+                </li>
+                <li>
+                  <b>Image Upload Support:</b> Users can upload an image with each review. Images are stored on the
+                  server
+                  and displayed alongside the review. Uses Multer middleware for handling image uploads on the backend.
+                </li>
+                <li>
+                  <b>View All The Reviews:</b> All submitted reviews are displayed on the main page. Each review shows:
+                  Movie Title, Review Text, Rating 1 to 5, Reviewer’s Name, and the movie cover or poster.
+                </li>
+                <li>
+                  <b>Edit Reviews:</b> Users can update existing reviews through an edit form. Fields such as title,
+                  review text, rating, and image can be changed.
+                </li>
+                <li>
+                  <b>Delete Reviews:</b> Reviews can be removed with a delete button.
+                </li>
+                <li>
+                  <b>MongoDB Integration:</b> Reviews are stored persistently using MongoDB via Mongoose. Each review is
+                  stored as a document in the database.
+                </li>
+                <li>
+                  <b>Express Backend API:</b> RESTful API built using Node.js and Express. API supports CRUD operations
+                  (Create, Read, Update, Delete).
+                </li>
+                <li>
+                  <b>Modern Frontend:</b> Clean and responsive UI built with HTML, CSS, and JavaScript. Interactive form
+                  handling and dynamic review updates.
+                </li>
+
+              </ul>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.3/html2pdf.bundle.min.js"
+    integrity="sha512-yu5WG6ewBNKx8svICzUA01vozhmiQCVfzjzW40eCHJdsDRaOifh9hPlWBDex5b32gWCzawTp1F3FJz60ps6TnQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
 
 </body>

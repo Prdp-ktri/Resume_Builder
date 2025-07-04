@@ -10,14 +10,20 @@
   margin-right: 50px;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+}
+
 .col-1 {
   background-color: rgb(0, 136, 91);
   color: white;
-  width: 35%;
+  width: 30%;
 }
 
-.container {
-  display: flex;
+.col-2 {
+  width: 70%;
+  margin-right: 100px;
 }
 
 .row1-1 {
@@ -119,4 +125,21 @@
 
 body {
   display: flex;
+  justify-content: flex-start;
+}
+
+@page {
+  size: A4 portrait; /* A4: 210 × 297 mm, portrait orientation */
+  margin: 16mm; /* 16mm on all sides for a neat print boundary */
+}
+
+#resume-content {
+  width: 794px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.page-break {
+  page-break-before: always;
 }
